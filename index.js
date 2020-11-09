@@ -19,7 +19,7 @@ function processFirstItem(stringList, callback) {
 console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
 
 // ⭐️ Example Challenge END ⭐️
-
+  
 
 ///// M V P ///////
 
@@ -61,11 +61,11 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
+function inning(){
+  return Math.floor(Math.random() * 3)
 
 }
+console.log(inning())
 
 /* Task 3: finalScore()
 Use the finalScore function below to do the following:
@@ -80,12 +80,14 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
+function finalScore(inningCB, ){
+  return {
+    Home: inningCB(),
+    Away: inningCB(),
+  }
 
 }
-
+console.log(finalScore(inning))
 /* Task 4: 
 // create a function called getInningScore 
 // the function should take the inning function as an argument 
